@@ -58,21 +58,91 @@ const questions = [
     },
     {
         type:'input',
-        message:'How do you use this app?',
-        name:'usage',
-        validate: usageResponse => {
-        if (usageResponse) {
+        message:'How can someone contribute to this app?',
+        name:'contribute',
+        validate: contribResponse => {
+        if (contribResponse) {
             return true;
         } else {
-            console.log('Please provide details on how to use your app!');
+            console.log('Please provide details on how to someone can contribute to this app!');
             return false;
          }
         }
     },
+    {
+        type:'input',
+        message:'How would someone test this project?',
+        name:'test',
+        validate: testResponse => {
+        if (testResponse) {
+            return true;
+        } else {
+            console.log('Please provide details on how you would test this app!');
+            return false;
+         }
+        }
+    },
+    {
+        type:'list',
+        message:'Please choose a license from the list below?',
+        name:'license',
+        choices: ['Apache License 2.0', 'GNU License v3.0', 'MIT License', 'Boost Software License 1.0', 'Mozilla Public License'],
+        validate: licenseResponse => {
+        if (licenseResponse) {
+            return true;
+        } else {
+            console.log('Please provide the license that you would like to add to this project!');
+            return false;
+         }
+        }
+    },
+    {
+        type:'input',
+        message:'Please provide your GitHub username',
+        name:'github',
+        validate: githubResponse => {
+        if (githubResponse) {
+            return true;
+        } else {
+            console.log('Please provide your Github username!');
+            return false;
+         }
+        }
+    },
+    {
+        type:'input',
+        message:'Please provide your GitHub username',
+        name:'github',
+        validate: githubResponse => {
+        if (githubResponse) {
+            return true;
+        } else {
+            console.log('Please provide your Github username!');
+            return false;
+         }
+        }
+    },
+    {
+    type:'input',
+    message:'Please provide your email.',
+    name:'email',
+    validate: emailResponse => {
+    if (emailResponse) {
+        return true;
+    } else {
+        console.log('Please provide your email.');
+        return false;
+     }
+    }
+},
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+    fs.writeFile(fileName, data, (err) => {
+        err ? console.log(err) : console.log('Success!');;
+    });
+};
 
 // TODO: Create a function to initialize app
 function init() {
