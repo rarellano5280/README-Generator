@@ -87,7 +87,7 @@ const questions = [
         type:'list',
         message:'Please choose a license from the list below?',
         name:'license',
-        choices: ['Apache License 2.0', 'GNU License v3.0', 'MIT License', 'Boost Software License 1.0', 'Mozilla Public License'],
+        choices: ['Apache License 2.0', 'GNU License v3.0', 'MIT License', 'Boost Software License 1.0', 'Mozilla Public License', 'No license'],
         validate: licenseResponse => {
         if (licenseResponse) {
             return true;
