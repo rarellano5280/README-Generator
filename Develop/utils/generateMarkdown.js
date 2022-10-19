@@ -3,15 +3,15 @@
 function renderLicenseBadge(license) {
   switch (license) {
     case 'Apache 2.0':
-     return "[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)]";
+     return "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0)";
     case 'GNU v3.0':
-      return "[![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)]";
+      return "[![License: GNU v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0.en.html)";
     case 'MIT':
-      return "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)]";
+      return "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://choosealicense.com/licenses/mit/)";
     case 'Open Database':
-      return "[![License: ODbL](https://img.shields.io/badge/License-ODbL-brightgreen.svg)]";
+      return "[![License: ODbL](https://img.shields.io/badge/License-ODbL-brightgreen.svg)](https://opendatacommons.org/licenses/odbl/')";
     case 'Mozilla Public':
-      return "[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)]";
+      return "[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://www.boost.org/LICENSE_1_0.txt)";
    default:
     return ''
   }
