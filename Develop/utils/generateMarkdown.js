@@ -1,29 +1,39 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
-  if (license == 'No license') {
-  return ``;
-  } else {
-  return `[![${license} license](https://img.shields.io/badge/License-${license}-yellow.svg)](${renderLicenseLink(license)}`
+  switch (license) {
+    case 'Apache 2.0':
+     return "[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)]";
+    case 'GNU v3.0':
+      return "[![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)]";
+    case 'MIT':
+      return "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)]";
+    case 'Open Database':
+      return "[![License: ODbL](https://img.shields.io/badge/License-ODbL-brightgreen.svg)]";
+    case 'Mozilla Public':
+      return "[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)]";
+   default:
+    return ''
   }
 }
+
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
-if (license === 'Apache License 2.0') {
+if (license === 'Apache 2.0') {
   return 'https://www.apache.org/licenses/LICENSE-2.0'
 }
-if (license === 'GNU License v3.0') {
+if (license === 'GNU v3.0') {
   return 'https://www.gnu.org/licenses/gpl-3.0.en.html'
 }
-if (license === 'MIT License') {
+if (license === 'MIT') {
   return 'https://choosealicense.com/licenses/mit/'
 }
-if (license === 'Boost Software License 1.0') {
-  return 'https://www.boost.org/LICENSE_1_0.txt'
+if (license === 'Open Database') {
+  return 'https://opendatacommons.org/licenses/odbl/'
 }
-if (license === 'Mozilla Public License'){
+if (license === 'Mozilla Public'){
   return 'https://www.boost.org/LICENSE_1_0.txt'
 }else{
   return ``
@@ -37,7 +47,7 @@ if (!license) {
   return ``;
 } else {
   return `## License
-  The project is protected under the ${license} license.`
+  The project is protected under the ${license} license. Please follow the following link if you'd like more details about this license ${renderLicenseLink(license)}`
 }
 }
 
