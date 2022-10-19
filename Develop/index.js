@@ -1,9 +1,13 @@
 // TODO: Include packages needed for this application
+
+//Requires for npm packages and path for my generateMarkdown file
 const inquirer = require('inquirer');
 const fs = require('fs');
 const generateMarkdown = require('./utils/generateMarkdown.js')
 
 // TODO: Create an array of questions for user input
+
+//Array of questions that will prompt the user a questions and validate the answer. If no answer is given is will log console log a message. 
 const questions = [
     {
         type:'input',
@@ -139,13 +143,17 @@ const questions = [
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {
-    fs.writeFile(fileName, data, (err) => {
+
+//Function to write file from data 
+function writeToFile(readme, data) {
+    fs.writeFile(readme, data, (err) => {
         err ? console.log(err) : console.log('Success!');
     });
 };
 
 // TODO: Create a function to initialize app
+
+//function to initalize questions to prompt, and will write the user responses to a README.md file. 
 function init() {
         inquirer.prompt(questions)
         .then(function (userResponse) {

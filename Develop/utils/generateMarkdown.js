@@ -1,5 +1,7 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
+
+// Created a switch that will handle the license choice 
 function renderLicenseBadge(license) {
   switch (license) {
     case 'Apache 2.0':
@@ -20,6 +22,8 @@ function renderLicenseBadge(license) {
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
+
+//Needed to create an if statement to render the correct link to the license section of the README
 function renderLicenseLink(license) {
 if (license === 'Apache 2.0') {
   return 'https://www.apache.org/licenses/LICENSE-2.0'
@@ -42,6 +46,8 @@ if (license === 'Mozilla Public'){
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
+
+//Will return the license section with the correct license name and link. 
 function renderLicenseSection(license) {
 if (!license) {
   return ``;
@@ -52,11 +58,22 @@ if (!license) {
 }
 
 // TODO: Create a function to generate markdown for README
+
+//Structure of README that will be generated from data responses. 
 function generateMarkdown(data) {
   return `# ${data.title}
   
   ${renderLicenseBadge(data.license)}
 
+  ## Table of Contents
+  *[Description](#description)
+  *[Installation](#installation)
+  *[Usage](#usage)
+  *[Contribute](#contribute)
+  *[Test](#test)
+  *[License](#license)
+  *[Contact Me](#contact-me)
+    
   ## Description
   ${data.description}
 
@@ -76,6 +93,7 @@ function generateMarkdown(data) {
 
   ## Contact Me
   GitHub: https://github.com/${data.github}
+
   Email: ${data.email}
 
 `;
