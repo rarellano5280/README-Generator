@@ -1,4 +1,4 @@
-# sdgdsagdsgd
+# README Generator
   
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://choosealicense.com/licenses/mit/)
 
@@ -12,25 +12,25 @@
 7. [Contact Me](#contact-me)
     
   ## Description
-  dsgfgdsgdsg
+  This is description of my app
 
   ## Installation
-  sdgdsgdsg
+  This is the install process
 
   ## Usage
-  dsgdsgsdg
+  This is how you use my app
 
   ## Contribute
-  dgsdgsg
+  This is how you can contribute
 
   ## Test
-  gdsdsgdsa
+  This is how you can test.
 
   ## License
   The project is protected under the MIT license. Please follow the following link if you'd like more details about this license https://choosealicense.com/licenses/mit/
 
   ## Contact Me
-  GitHub: https://github.com/dsfsdgdsg
+  GitHub: https://github.com/rarellano5280
 
-  Email: dsgdsg
+  Email: robert.arellano26@yahoo.com
 
