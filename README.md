@@ -25,6 +25,7 @@ You will can install the NPM node package manager by running the following comma
   Once you have installed the npm package manager you can initialize the readme generator by running "node index.js" in the command line. You will then answer all the required questions with the information you'd like to include you new professional README. 
 
   ## Demo Video
+  https://bootcampspot.instructuremedia.com/embed/c1811b1d-6bd3-4bb5-8771-8443c2c599d2
 
   ## License
   The project is protected under the MIT license. Please follow the following link if you'd like more details about this license https://choosealicense.com/licenses/mit/
